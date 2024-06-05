@@ -1,0 +1,451 @@
+IQ-TREE multicore version 2.0.7 for Linux 64-bit built Jan 21 2022
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    bio-G8D0H5J-bapw (AVX, 62 GB RAM)
+Command: iqtree2 -s matrix.fas -m MFP -bb 1000 -T AUTO
+Seed:    185796 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Feb 22 12:15:35 2024
+Kernel:  AVX - auto-detect threads (24 CPU cores detected)
+
+Reading alignment file matrix.fas ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 42 sequences with 42942 columns, 36877 distinct patterns
+31155 parsimony-informative, 3293 singleton sites, 8494 constant sites
+        Gap/Ambiguity  Composition  p-value
+   1  Aalg     24.62%    failed      0.00%
+   2  Aloc     11.25%    failed      0.00%
+   3  Amac     36.78%    failed      0.00%
+   4  Amph     67.62%    failed      0.00%
+   5  Bden     38.20%    failed      0.00%
+   6  Cdik     70.89%    failed      0.00%
+   7  Dmul     34.45%    failed      0.00%
+   8  Droe     75.57%    passed     36.05%
+   9  Eaed     44.49%    failed      0.00%
+  10  Ebien    36.11%    failed      0.00%
+  11  Ecan     44.27%    failed      0.00%
+  12  Ecun      0.45%    failed      0.00%
+  13  Ehel      0.15%    failed      0.00%
+  14  Ehep     43.58%    failed      0.00%
+  15  Eint      0.19%    failed      0.00%
+  16  Eroe      0.71%    failed      0.00%
+  17  Heri     62.07%    failed      0.00%
+  18  Hmag     21.23%    failed      0.00%
+  19  Htva     22.83%    failed      0.00%
+  20  Mdap     70.70%    failed      0.00%
+  21  Metch    68.85%    failed      0.00%
+  22  NYNPr    12.23%    failed      0.00%
+  23  Nant      4.78%    failed      0.00%
+  24  Napi     31.01%    failed      0.00%
+  25  Nbom     20.29%    failed      0.00%
+  26  Ncer      1.98%    failed      0.00%
+  27  Ndis     30.31%    failed      0.00%
+  28  Ngra      3.74%    failed      0.00%
+  29  Np1E6    28.07%    failed      0.00%
+  30  Nparm1   30.35%    failed      0.00%
+  31  Nspm5    27.55%    failed      0.00%
+  32  Ocol      0.65%    failed      0.00%
+  33  Pneu     49.30%    failed      0.00%
+  34  Psac     50.55%    failed      0.00%
+  35  Psp      36.33%    failed      0.00%
+  36  Rall     43.94%    failed      0.00%
+  37  Slop     19.31%    failed      0.00%
+  38  Tcon      6.83%    failed      0.02%
+  39  Thom     34.53%    failed      0.00%
+  40  Trat     25.63%    failed      0.00%
+  41  Vcor     24.17%    failed      0.06%
+  42  Vcul     27.42%    failed      0.00%
+WARNING: 7 sequences contain more than 50% gaps/ambiguity
+****  TOTAL    30.57%  41 sequences failed composition chi2 test (p-value<5%; df=19)
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 1.234 seconds
+Measuring multi-threading efficiency up to 24 CPU cores
+3 trees examined
+Threads: 1 / Time: 35.098 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -1611105
+Threads: 2 / Time: 17.519 sec / Speedup: 2.003 / Efficiency: 100% / LogL: -1611105
+Threads: 3 / Time: 12.261 sec / Speedup: 2.863 / Efficiency: 95% / LogL: -1611105
+Threads: 4 / Time: 9.475 sec / Speedup: 3.704 / Efficiency: 93% / LogL: -1611105
+Threads: 5 / Time: 7.939 sec / Speedup: 4.421 / Efficiency: 88% / LogL: -1611105
+Threads: 6 / Time: 6.811 sec / Speedup: 5.153 / Efficiency: 86% / LogL: -1611105
+Threads: 7 / Time: 9.996 sec / Speedup: 3.511 / Efficiency: 50% / LogL: -1611105
+BEST NUMBER OF THREADS: 6
+
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -1196340.523
+2. Current log-likelihood: -1196339.372
+Optimal log-likelihood: -1196339.024
+Proportion of invariable sites: 0.137
+Gamma shape alpha: 1.196
+Parameters optimization took 2 rounds (11.997 sec)
+Time for fast ML tree search: 83.124 seconds
+
+NOTE: ModelFinder requires 2535 MB RAM!
+ModelFinder will test up to 546 protein models (sample size: 42942) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  LG            1261977.870  81  2524117.739  2524118.049  2524819.815
+  2  LG+I          1230279.488  82  2460722.975  2460723.293  2461433.719
+  3  LG+G4         1197597.524  82  2395359.048  2395359.365  2396069.792
+  4  LG+I+G4       1196338.895  83  2392843.791  2392844.116  2393563.202
+  5  LG+R2         1206490.244  83  2413146.489  2413146.814  2413865.900
+  6  LG+R3         1197563.506  85  2395297.011  2395297.353  2396033.758
+  7  LG+R4         1195975.046  87  2392124.093  2392124.450  2392878.175
+  8  LG+R5         1195705.423  89  2391588.846  2391589.220  2392360.263
+  9  LG+R6         1195663.286  91  2391508.572  2391508.963  2392297.324
+ 10  LG+R7         1195660.098  93  2391506.196  2391506.604  2392312.283
+ 22  LG+F+R6       1190623.633  110 2381467.266  2381467.836  2382420.702
+ 35  WAG+R6        1208687.408  91  2417556.817  2417557.207  2418345.569
+ 48  WAG+F+R6      1201091.853  110 2402403.707  2402404.277  2403357.143
+ 61  JTT+R6        1211389.146  91  2422960.291  2422960.682  2423749.043
+ 74  JTT+F+R6      1204370.311  110 2408960.622  2408961.192  2409914.058
+ 87  JTTDCMut+R6   1211202.235  91  2422586.469  2422586.860  2423375.221
+100  JTTDCMut+F+R6 1204049.645  110 2408319.290  2408319.860  2409272.726
+113  DCMut+R6      1220951.134  91  2442084.268  2442084.659  2442873.020
+126  DCMut+F+R6    1209937.117  110 2420094.234  2420094.804  2421047.671
+139  VT+R6         1211133.273  91  2422448.545  2422448.936  2423237.297
+152  VT+F+R6       1205399.511  110 2411019.021  2411019.591  2411972.458
+165  PMB+R6        1219388.076  91  2438958.152  2438958.543  2439746.905
+178  PMB+F+R6      1214444.381  110 2429108.762  2429109.332  2430062.199
+191  Blosum62+R6   1215974.127  91  2432130.253  2432130.644  2432919.005
+204  Blosum62+F+R6 1212780.763  110 2425781.525  2425782.095  2426734.962
+217  Dayhoff+R6    1220852.094  91  2441886.188  2441886.578  2442674.940
+230  Dayhoff+F+R6  1209850.145  110 2419920.290  2419920.860  2420873.727
+243  mtREV+R6      1264524.060  91  2529230.120  2529230.511  2530018.872
+256  mtREV+F+R6    1218108.937  110 2436437.875  2436438.445  2437391.312
+269  mtART+R6      1253031.047  91  2506244.094  2506244.485  2507032.846
+282  mtART+F+R6    1214049.945  110 2428319.890  2428320.460  2429273.327
+295  mtZOA+R6      1234110.050  91  2468402.100  2468402.491  2469190.852
+308  mtZOA+F+R6    1203828.284  110 2407876.568  2407877.138  2408830.005
+321  mtMet+R6      1250835.403  91  2501852.807  2501853.198  2502641.559
+334  mtMet+F+R6    1214888.272  110 2429996.543  2429997.113  2430949.980
+347  mtVer+R6      1276159.728  91  2552501.455  2552501.846  2553290.207
+360  mtVer+F+R6    1236204.995  110 2472629.990  2472630.560  2473583.426
+373  mtInv+R6      1250187.467  91  2500556.934  2500557.325  2501345.686
+386  mtInv+F+R6    1206297.359  110 2412814.718  2412815.288  2413768.154
+399  mtMAM+R6      1285517.710  91  2571217.420  2571217.810  2572006.172
+412  mtMAM+F+R6    1241666.747  110 2483553.494  2483554.064  2484506.931
+425  HIVb+R6       1235103.507  91  2470389.014  2470389.405  2471177.767
+438  HIVb+F+R6     1227317.330  110 2454854.660  2454855.230  2455808.097
+451  HIVw+R6       1282861.416  91  2565904.833  2565905.223  2566693.585
+464  HIVw+F+R6     1266975.386  110 2534170.773  2534171.343  2535124.209
+477  FLU+R6        1224927.405  91  2450036.810  2450037.201  2450825.562
+490  FLU+F+R6      1222808.520  110 2445837.040  2445837.610  2446790.476
+503  rtREV+R6      1209566.041  91  2419314.083  2419314.473  2420102.835
+516  rtREV+F+R6    1195572.029  110 2391364.059  2391364.629  2392317.495
+529  cpREV+R6      1209203.961  91  2418589.921  2418590.312  2419378.674
+542  cpREV+F+R6    1206977.101  110 2414174.201  2414174.772  2415127.638
+Akaike Information Criterion:           LG+F+R6
+Corrected Akaike Information Criterion: LG+F+R6
+Bayesian Information Criterion:         LG+F+R6
+Best-fit model: LG+F+R6 chosen according to BIC
+
+All model information printed to matrix.fas.model.gz
+CPU time for ModelFinder: 103116.358 seconds (28h:38m:36s)
+Wall-clock time for ModelFinder: 17781.414 seconds (4h:56m:21s)
+Generating 1000 samples for ultrafast bootstrap (seed: 185796)...
+
+NOTE: 1577 MB RAM (1 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -1190623.633
+Optimal log-likelihood: -1190623.568
+Site proportion and rates:  (0.169,0.018) (0.173,0.202) (0.240,0.609) (0.238,1.275) (0.143,2.381) (0.038,4.545)
+Parameters optimization took 1 rounds (15.337 sec)
+Computing ML distances based on estimated model parameters... 1.169 sec
+Computing BIONJ tree...
+0.001 seconds
+Log-likelihood of BIONJ tree: -1190665.881
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 151.458 second
+Computing log-likelihood of 98 initial trees ... 300.226 seconds
+Current best score: -1190623.568
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -1190623.282
+Iteration 10 / LogL: -1190643.873 / Time: 0h:15m:9s
+Iteration 20 / LogL: -1190687.460 / Time: 0h:23m:4s
+Finish initializing candidate tree set (2)
+Current best tree score: -1190623.282 / CPU time: 1338.967
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -1190659.712 / Time: 0h:31m:48s (1h:17m:51s left)
+Iteration 40 / LogL: -1190668.031 / Time: 0h:40m:6s (1h:2m:43s left)
+
+******************************************************
+CHECKPOINT: Resuming analysis from matrix.fas.ckp.gz
+
+IQ-TREE multicore version 2.0.7 for Linux 64-bit built Jan 21 2022
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    bio-G8D0H5J-bapw (AVX, 62 GB RAM)
+Command: iqtree2 -s matrix.fas -m MFP -bb 1000 -T AUTO
+Seed:    974699 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Feb 22 17:58:34 2024
+Kernel:  AVX - auto-detect threads (24 CPU cores detected)
+
+Reading alignment file matrix.fas ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 42 sequences with 42942 columns, 36877 distinct patterns
+31155 parsimony-informative, 3293 singleton sites, 8494 constant sites
+        Gap/Ambiguity  Composition  p-value
+   1  Aalg     24.62%    failed      0.00%
+   2  Aloc     11.25%    failed      0.00%
+   3  Amac     36.78%    failed      0.00%
+   4  Amph     67.62%    failed      0.00%
+   5  Bden     38.20%    failed      0.00%
+   6  Cdik     70.89%    failed      0.00%
+   7  Dmul     34.45%    failed      0.00%
+   8  Droe     75.57%    passed     36.05%
+   9  Eaed     44.49%    failed      0.00%
+  10  Ebien    36.11%    failed      0.00%
+  11  Ecan     44.27%    failed      0.00%
+  12  Ecun      0.45%    failed      0.00%
+  13  Ehel      0.15%    failed      0.00%
+  14  Ehep     43.58%    failed      0.00%
+  15  Eint      0.19%    failed      0.00%
+  16  Eroe      0.71%    failed      0.00%
+  17  Heri     62.07%    failed      0.00%
+  18  Hmag     21.23%    failed      0.00%
+  19  Htva     22.83%    failed      0.00%
+  20  Mdap     70.70%    failed      0.00%
+  21  Metch    68.85%    failed      0.00%
+  22  NYNPr    12.23%    failed      0.00%
+  23  Nant      4.78%    failed      0.00%
+  24  Napi     31.01%    failed      0.00%
+  25  Nbom     20.29%    failed      0.00%
+  26  Ncer      1.98%    failed      0.00%
+  27  Ndis     30.31%    failed      0.00%
+  28  Ngra      3.74%    failed      0.00%
+  29  Np1E6    28.07%    failed      0.00%
+  30  Nparm1   30.35%    failed      0.00%
+  31  Nspm5    27.55%    failed      0.00%
+  32  Ocol      0.65%    failed      0.00%
+  33  Pneu     49.30%    failed      0.00%
+  34  Psac     50.55%    failed      0.00%
+  35  Psp      36.33%    failed      0.00%
+  36  Rall     43.94%    failed      0.00%
+  37  Slop     19.31%    failed      0.00%
+  38  Tcon      6.83%    failed      0.02%
+  39  Thom     34.53%    failed      0.00%
+  40  Trat     25.63%    failed      0.00%
+  41  Vcor     24.17%    failed      0.06%
+  42  Vcul     27.42%    failed      0.00%
+WARNING: 7 sequences contain more than 50% gaps/ambiguity
+****  TOTAL    30.57%  41 sequences failed composition chi2 test (p-value<5%; df=19)
+
+NOTE: Restoring information from model checkpoint file matrix.fas.model.gz
+
+CHECKPOINT: Initial tree restored
+Measuring multi-threading efficiency up to 24 CPU cores
+3 trees examined
+Threads: 1 / Time: 35.156 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -1594611
+Threads: 2 / Time: 19.489 sec / Speedup: 1.804 / Efficiency: 90% / LogL: -1594611
+Threads: 3 / Time: 13.399 sec / Speedup: 2.624 / Efficiency: 87% / LogL: -1594611
+Threads: 4 / Time: 9.792 sec / Speedup: 3.590 / Efficiency: 90% / LogL: -1594611
+Threads: 5 / Time: 7.884 sec / Speedup: 4.459 / Efficiency: 89% / LogL: -1594611
+Threads: 6 / Time: 6.721 sec / Speedup: 5.231 / Efficiency: 87% / LogL: -1594611
+Threads: 7 / Time: 9.380 sec / Speedup: 3.748 / Efficiency: 54% / LogL: -1594611
+BEST NUMBER OF THREADS: 6
+
+Perform fast likelihood tree search using LG+I+G model...
+CHECKPOINT: Tree restored, LogL: -1196364.035
+NOTE: ModelFinder requires 2535 MB RAM!
+ModelFinder will test up to 546 protein models (sample size: 42942) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  LG            1261977.870  81  2524117.740  2524118.050  2524819.816
+  2  LG+I          1230279.488  82  2460722.976  2460723.294  2461433.720
+  3  LG+G4         1197597.524  82  2395359.048  2395359.366  2396069.792
+  4  LG+I+G4       1196338.895  83  2392843.790  2392844.115  2393563.201
+  5  LG+R2         1206490.244  83  2413146.488  2413146.813  2413865.899
+  6  LG+R3         1197563.506  85  2395297.012  2395297.353  2396033.758
+  7  LG+R4         1195975.046  87  2392124.092  2392124.449  2392878.174
+  8  LG+R5         1195705.423  89  2391588.846  2391589.220  2392360.263
+  9  LG+R6         1195663.286  91  2391508.572  2391508.963  2392297.324
+ 10  LG+R7         1195660.098  93  2391506.196  2391506.604  2392312.283
+ 22  LG+F+R6       1190623.633  110 2381467.266  2381467.836  2382420.703
+ 35  WAG+R6        1208687.408  91  2417556.816  2417557.207  2418345.568
+ 48  WAG+F+R6      1201091.853  110 2402403.706  2402404.276  2403357.143
+ 61  JTT+R6        1211389.146  91  2422960.292  2422960.683  2423749.044
+ 74  JTT+F+R6      1204370.311  110 2408960.622  2408961.192  2409914.059
+ 87  JTTDCMut+R6   1211202.235  91  2422586.470  2422586.861  2423375.222
+100  JTTDCMut+F+R6 1204049.645  110 2408319.290  2408319.860  2409272.727
+113  DCMut+R6      1220951.134  91  2442084.268  2442084.659  2442873.020
+126  DCMut+F+R6    1209937.117  110 2420094.234  2420094.804  2421047.671
+139  VT+R6         1211133.273  91  2422448.546  2422448.937  2423237.298
+152  VT+F+R6       1205399.511  110 2411019.022  2411019.592  2411972.459
+165  PMB+R6        1219388.076  91  2438958.152  2438958.543  2439746.904
+178  PMB+F+R6      1214444.381  110 2429108.762  2429109.332  2430062.199
+191  Blosum62+R6   1215974.127  91  2432130.254  2432130.645  2432919.006
+204  Blosum62+F+R6 1212780.763  110 2425781.526  2425782.096  2426734.963
+217  Dayhoff+R6    1220852.094  91  2441886.188  2441886.579  2442674.940
+230  Dayhoff+F+R6  1209850.145  110 2419920.290  2419920.860  2420873.727
+243  mtREV+R6      1264524.060  91  2529230.120  2529230.511  2530018.872
+256  mtREV+F+R6    1218108.937  110 2436437.874  2436438.444  2437391.311
+269  mtART+R6      1253031.047  91  2506244.094  2506244.485  2507032.846
+282  mtART+F+R6    1214049.945  110 2428319.890  2428320.460  2429273.327
+295  mtZOA+R6      1234110.050  91  2468402.100  2468402.491  2469190.852
+308  mtZOA+F+R6    1203828.284  110 2407876.568  2407877.138  2408830.005
+321  mtMet+R6      1250835.403  91  2501852.806  2501853.197  2502641.558
+334  mtMet+F+R6    1214888.272  110 2429996.544  2429997.114  2430949.981
+347  mtVer+R6      1276159.728  91  2552501.456  2552501.847  2553290.208
+360  mtVer+F+R6    1236204.995  110 2472629.990  2472630.560  2473583.427
+373  mtInv+R6      1250187.467  91  2500556.934  2500557.325  2501345.686
+386  mtInv+F+R6    1206297.359  110 2412814.718  2412815.288  2413768.155
+399  mtMAM+R6      1285517.710  91  2571217.420  2571217.811  2572006.172
+412  mtMAM+F+R6    1241666.747  110 2483553.494  2483554.064  2484506.931
+425  HIVb+R6       1235103.507  91  2470389.014  2470389.405  2471177.766
+438  HIVb+F+R6     1227317.330  110 2454854.660  2454855.230  2455808.097
+451  HIVw+R6       1282861.416  91  2565904.832  2565905.223  2566693.584
+464  HIVw+F+R6     1266975.386  110 2534170.772  2534171.342  2535124.209
+477  FLU+R6        1224927.405  91  2450036.810  2450037.201  2450825.562
+490  FLU+F+R6      1222808.520  110 2445837.040  2445837.610  2446790.477
+503  rtREV+R6      1209566.041  91  2419314.082  2419314.473  2420102.834
+516  rtREV+F+R6    1195572.029  110 2391364.058  2391364.628  2392317.495
+529  cpREV+R6      1209203.961  91  2418589.922  2418590.313  2419378.674
+542  cpREV+F+R6    1206977.101  110 2414174.202  2414174.772  2415127.639
+Akaike Information Criterion:           LG+F+R6
+Corrected Akaike Information Criterion: LG+F+R6
+Bayesian Information Criterion:         LG+F+R6
+Best-fit model: LG+F+R6 chosen according to BIC
+
+All model information printed to matrix.fas.model.gz
+CPU time for ModelFinder: 279.743 seconds (0h:4m:39s)
+Wall-clock time for ModelFinder: 103.155 seconds (0h:1m:43s)
+Generating 1000 samples for ultrafast bootstrap (seed: 974699)...
+CHECKPOINT: 1000 UFBoot trees and 0 UFBootSplits restored
+
+NOTE: 1577 MB RAM (1 GB) is required!
+CHECKPOINT: Model parameters restored, LogL: -1190623.282
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+CHECKPOINT: Candidate tree set restored, best LogL: -1190623.282
+Finish initializing candidate tree set (2)
+Current best tree score: -1190623.282 / CPU time: 0.000
+Number of iterations: 46
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 50 / LogL: -1190657.404 / Time: 0h:3m:33s (0h:3m:42s left)
+Log-likelihood cutoff on original alignment: -1190750.795
+Iteration 60 / LogL: -1190640.055 / Time: 0h:12m:24s (0h:8m:37s left)
+Iteration 70 / LogL: -1190661.954 / Time: 0h:21m:53s (0h:9m:50s left)
+Iteration 80 / LogL: -1190706.881 / Time: 0h:30m:58s (0h:8m:13s left)
+Iteration 90 / LogL: -1190624.833 / Time: 0h:40m:16s (0h:4m:58s left)
+Iteration 100 / LogL: -1190655.300 / Time: 0h:48m:52s (0h:0m:29s left)
+Log-likelihood cutoff on original alignment: -1190750.795
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:50m:36s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -1190623.282
+2. Current log-likelihood: -1190623.233
+3. Current log-likelihood: -1190623.163
+4. Current log-likelihood: -1190622.993
+5. Current log-likelihood: -1190622.929
+6. Current log-likelihood: -1190622.866
+7. Current log-likelihood: -1190622.804
+8. Current log-likelihood: -1190622.743
+9. Current log-likelihood: -1190622.685
+10. Current log-likelihood: -1190622.538
+11. Current log-likelihood: -1190622.481
+12. Current log-likelihood: -1190622.425
+13. Current log-likelihood: -1190622.371
+14. Current log-likelihood: -1190622.268
+15. Current log-likelihood: -1190622.225
+16. Current log-likelihood: -1190622.184
+17. Current log-likelihood: -1190622.144
+18. Current log-likelihood: -1190622.105
+19. Current log-likelihood: -1190622.066
+20. Current log-likelihood: -1190622.029
+21. Current log-likelihood: -1190621.993
+22. Current log-likelihood: -1190621.874
+23. Current log-likelihood: -1190621.839
+24. Current log-likelihood: -1190621.803
+25. Current log-likelihood: -1190621.769
+26. Current log-likelihood: -1190621.736
+27. Current log-likelihood: -1190621.704
+28. Current log-likelihood: -1190621.672
+29. Current log-likelihood: -1190621.641
+30. Current log-likelihood: -1190621.611
+31. Current log-likelihood: -1190621.582
+32. Current log-likelihood: -1190621.553
+33. Current log-likelihood: -1190621.525
+34. Current log-likelihood: -1190621.498
+35. Current log-likelihood: -1190621.472
+36. Current log-likelihood: -1190621.446
+37. Current log-likelihood: -1190621.420
+38. Current log-likelihood: -1190621.394
+39. Current log-likelihood: -1190621.368
+40. Current log-likelihood: -1190621.344
+41. Current log-likelihood: -1190621.320
+42. Current log-likelihood: -1190621.307
+43. Current log-likelihood: -1190621.294
+44. Current log-likelihood: -1190621.281
+45. Current log-likelihood: -1190621.268
+46. Current log-likelihood: -1190621.256
+47. Current log-likelihood: -1190621.243
+48. Current log-likelihood: -1190621.231
+49. Current log-likelihood: -1190621.219
+50. Current log-likelihood: -1190621.207
+51. Current log-likelihood: -1190621.173
+52. Current log-likelihood: -1190621.160
+53. Current log-likelihood: -1190621.147
+54. Current log-likelihood: -1190621.115
+55. Current log-likelihood: -1190621.092
+56. Current log-likelihood: -1190621.081
+57. Current log-likelihood: -1190621.069
+58. Current log-likelihood: -1190621.057
+59. Current log-likelihood: -1190621.046
+60. Current log-likelihood: -1190621.035
+61. Current log-likelihood: -1190621.024
+62. Current log-likelihood: -1190621.013
+63. Current log-likelihood: -1190621.002
+64. Current log-likelihood: -1190620.992
+65. Current log-likelihood: -1190620.982
+66. Current log-likelihood: -1190620.971
+67. Current log-likelihood: -1190620.961
+Optimal log-likelihood: -1190620.945
+Site proportion and rates:  (0.172,0.018) (0.178,0.211) (0.249,0.638) (0.239,1.344) (0.131,2.523) (0.031,4.770)
+Parameters optimization took 67 rounds (932.235 sec)
+BEST SCORE FOUND : -1190620.945
+Creating bootstrap support values...
+Split supports printed to NEXUS file matrix.fas.splits.nex
+Total tree length: 11.977
+
+Total number of iterations: 102
+CPU time used for tree search: 18091.972 sec (5h:1m:31s)
+Wall-clock time used for tree search: 3034.431 sec (0h:50m:34s)
+Total CPU time used: 23516.557 sec (6h:31m:56s)
+Total wall-clock time used: 3969.526 sec (1h:6m:9s)
+
+Computing bootstrap consensus tree...
+Reading input file matrix.fas.splits.nex...
+42 taxa and 101 splits.
+Consensus tree written to matrix.fas.contree
+Reading input trees file matrix.fas.contree
+Log-likelihood of consensus tree: -1190620.940
+
+Analysis results written to: 
+  IQ-TREE report:                matrix.fas.iqtree
+  Maximum-likelihood tree:       matrix.fas.treefile
+  Likelihood distances:          matrix.fas.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          matrix.fas.splits.nex
+  Consensus tree:                matrix.fas.contree
+  Screen log file:               matrix.fas.log
+
+Date and Time: Thu Feb 22 19:06:57 2024
